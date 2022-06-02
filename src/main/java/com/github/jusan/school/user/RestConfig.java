@@ -1,6 +1,8 @@
 package com.github.jusan.school.user;
 
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -12,6 +14,7 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 @EnableWebSecurity // аннотация для WebSecurity модуля Spring Security
 @AllArgsConstructor
+@Slf4j
 public class RestConfig {
     @Bean
     public PasswordEncoder passwordEncoder() {
