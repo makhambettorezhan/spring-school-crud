@@ -16,8 +16,12 @@ public class StudentService {
     private StudentRepository studentRepository;
 
     public Long createStudent(StudentRequest userRequest) {
-        Student user = Student.builder().email(userRequest.getEmail()).firstName(userRequest.getFirstName())
-                .password(userRequest.getPassword()).lastName(userRequest.getLastName()).build();
+        Student user = Student.builder()
+                .email(userRequest.getEmail())
+                .firstName(userRequest.getFirstName())
+                .password(userRequest.getPassword())
+                .lastName(userRequest.getLastName())
+                .build();
         Student createdUser = studentRepository.save(user);
         return createdUser.getId();
     }
