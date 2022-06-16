@@ -11,3 +11,7 @@ Simple Spring Boot `CRUD` for `Student` entity.
 ## Features
 
 ![features](./features.png)
+
+## Updates
+
+Added a user authentication feature
